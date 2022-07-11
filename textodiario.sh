@@ -5,15 +5,19 @@
 # Julio 8 de 2022 - Barranquilla
 # Titulo: Diario de textos en bash V.01
 
+cd DATA
+while IFS= read -r line1
+do
+  Carpeta_Actual=$line1 
+done < carpeta
 
-# Carpetas asignadas manualmene
-Carpeta_Actual=DATA		
-Archivo_Actual=Julio2022
-Configuracion=config
+while IFS= read -r line2
+do
+  Archivo_Actual=$line2
+done < archivo
 
 # definicion del menu inicial
 Menu_Inicial () {
-	cd $Carpeta_Actual
 	echo "============================"
 	echo "TEXTO DIARIO EN BASH"
 	echo "----------------------------"
@@ -23,9 +27,6 @@ Menu_Inicial () {
 	echo "4 - Configuracion"
 	echo "5 - Salir"
 	echo "============================"
-	echo "Carpeta nueva: "$carpeta
-	echo "Archivo nuevo: "$archivo
-	echo "----------------------------"
 	echo "Carpeta actual: " $Carpeta_Actual
 	echo "Archivo actual: " $Archivo_Actual
 	echo "============================"
@@ -65,8 +66,8 @@ Menu_Conf () {
 	#echo $Carpeta_Actual
 	echo ""
 	echo "------------------------------------------------"
-	echo "Carpeta y archivos en directorio $Configuracion"
-	cat $Configuracion
+	echo "Carpeta:" $Carpeta_Actual
+	echo "Archivo:" $Archivo_Actual
 	echo "------------------------------------------------"
 	echo ""
 	echo "------------------------------------------------"
