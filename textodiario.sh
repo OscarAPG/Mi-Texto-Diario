@@ -18,18 +18,18 @@ done < archivo
 
 # definicion del menu inicial
 Menu_Inicial () {
-	echo "============================"
-	echo "TEXTO DIARIO EN BASH"
-	echo "----------------------------"
-	echo "1 - Crear Carpeta"
-	echo "2 - Crear Archivo"
-	echo "3 - Editar archivo"
-	echo "4 - Configuracion"
-	echo "5 - Salir"
-	echo "============================"
-	echo "Carpeta actual: " $Carpeta_Actual
-	echo "Archivo actual: " $Archivo_Actual
-	echo "============================"
+	echo -e "\e[7;32m============================\e[0m"
+	echo -e "\e[1;43m   TEXTO DIARIO EN BASH     \e[0m"
+	echo -e "\e[7;32m----------------------------\e[0m"
+	echo -e "\e[1;43m1 - Crear Carpeta           \e[0m"
+	echo -e "\e[1;43m2 - Crear Archivo           \e[0m"
+	echo -e "\e[1;43m3 - Editar archivo          \e[0m"
+	echo -e "\e[1;43m4 - Configuracion           \e[0m"
+	echo -e "\e[1;43m5 - Salir                   \e[0m"
+	echo -e "\e[7;32m============================\e[0m"
+	echo -e "\e[1;46mCarpeta actual: $Carpeta_Actual        \e[0m" 
+	echo -e "\e[1;46mArchivo actual: $Archivo_Actual       \e[0m" 
+	echo -e "\e[7;32m============================\e[0m"
 }
 
 # Esta funcion crea una carpeta en el directorio y cambia a ella
