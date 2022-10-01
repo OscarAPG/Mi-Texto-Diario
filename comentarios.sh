@@ -3,7 +3,7 @@
 # Fuente: Cursos de Youtube
 # Elaborado por: Oscar Paternina
 # Julio 8 de 2022 - Barranquilla
-# Titulo: Diario de textos en bash V.01
+# Titulo: Comentarios en bash V.01
 
 cd DATA
 while IFS= read -r line1
@@ -19,7 +19,7 @@ done < archivo
 # definicion del menu inicial
 Menu_Inicial () {
 	echo -e "\e[1;44m============================\e[0m"
-	echo -e "\e[1;31;43m   TEXTO DIARIO EN BASH     \e[0m"
+	echo -e "\e[1;31;43m    COMENTARIOS EN BASH     \e[0m"
 	echo -e "\e[1;44m----------------------------\e[0m"
 	echo -e "\e[30;42m1 - Crear Carpeta           \e[0m"
 	echo -e "\e[30;42m2 - Crear Archivo           \e[0m"
